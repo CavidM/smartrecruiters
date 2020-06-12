@@ -1,0 +1,15 @@
+header {
+    width: 100%;
+    background-color: #444545;
+    color: white;
+    height: 80px;
+
+    & .container {
+        height: inherit;
+        display: flex;
+    }
+
+    & .title {
+        margin: auto auto auto 0;
+    }
+}

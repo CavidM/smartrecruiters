@@ -1,0 +1,16 @@
+<app-postings-filter (change)="filterChange($event)"></app-postings-filter>
+
+
+<ul class="postings-list">
+    <li *ngFor="let posting of postings" data-test="posting">
+        <a routerLink="/postings/{{posting.id}}">
+            <div class="role-name" data-test="posting-name">
+                {{posting.name}}
+            </div>
+            <div class="role-address" data-test="posting-location">
+                <span> {{ posting.location.city }} </span>
+                <span> {{ posting.location.address }} </span>
+            </div>
+        </a>
+    </li>
+</ul>

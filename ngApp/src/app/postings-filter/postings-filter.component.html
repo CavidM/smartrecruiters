@@ -1,0 +1,16 @@
+<div class="filter">
+    <select name="country" #country (change)="changeFilter({country: country.value})">
+        <option value=''>Country</option>
+        <option value="pl">Krakow</option>
+        <option value="de">Berlin</option>
+    </select>
+
+    <select name="department" #department (change)="changeFilter({department: department.value})">
+        <option value=''>Department</option>
+
+        <option *ngFor="let department of departments" value="{{department['id']}}">
+            {{department.label}}
+        </option>
+
+    </select>
+</div>

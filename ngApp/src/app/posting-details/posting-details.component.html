@@ -1,0 +1,27 @@
+<div class="back-button">
+    <button appBackButton data-test="back"><-- Back</button>
+</div>
+
+<div class="makeStyles-root-17" >
+    <div class="postingItem">
+        <h2 class="postingItemTitle" data-test="posting-name">
+            {{posting.name}}
+        </h2>
+        <div data-test="posting-location" class="location">
+            <span>{{posting.city}}</span>
+            <span> {{posting.address}}</span>
+        </div>
+    </div>
+    <div class="postingItem" data-test="job-description">
+        <h3 class="postingItemTitle">
+            {{posting.description.title}}
+        </h3>
+        <div class="section" [innerHtml]="posting.description.text | safe:'html'"></div>
+    </div>
+    <div class="postingItem" data-test="job-qualifications">
+        <h3 class="postingItemTitle">
+            {{posting.qualification.title}}
+        </h3>
+        <div class="section" [innerHtml]="posting.qualification.text | safe:'html'"></div>
+    </div>
+</div>
